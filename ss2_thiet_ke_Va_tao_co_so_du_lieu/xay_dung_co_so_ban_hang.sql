@@ -3,13 +3,13 @@ create database building_sale ;
 use building_sale;
 create table customer(
 cID int auto_increment primary key ,
-cName varchar(45),
-cAge date
+cName varchar(25),
+cAge tinyint
 );
 create table oder(
 oId int auto_increment primary key,
 cId int,
-oDate date,
+oDate datetime,
 oTotalPrice int,
 foreign key(cId)references customer(cId)
 );

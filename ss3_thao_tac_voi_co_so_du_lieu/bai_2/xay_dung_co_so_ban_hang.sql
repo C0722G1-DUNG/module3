@@ -6,7 +6,7 @@ cID int auto_increment primary key ,
 cName varchar(25),
 cAge tinyint
 );
-create table oder(
+create table `order`(
 oId int auto_increment primary key,
 cId int,
 oDate datetime,
