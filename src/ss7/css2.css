@@ -1,0 +1,136 @@
+.head {
+    background-color: wheat;
+    height: 50px;
+    width: 100%;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+
+}
+
+.left {
+    background: yellow;
+}
+
+.right {
+    background: #0f6674;
+}
+
+.contain {
+    background: yellow;
+}
+
+.row {
+    /*cho phép thẻ div (col) nổi lên trên*/
+    display: flex;
+    /*Các thẻ div (col)  không đủ chỗ chứa trên 1 hàng thì rớt xuống*/
+    flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 1241px) {
+    .col-l-1 {
+        width: 8.33333%;
+    }
+
+    .col-l-2 {
+        width: 16.66667%;
+    }
+
+    .col-l-3 {
+        width: 25%;
+    }
+
+    .col-l-4 {
+        width: 33.33333%;
+    }
+
+    .col-l-5 {
+        width: 41.66667%;
+    }
+
+    .col-l-6 {
+        width: 50%;
+    }
+
+    .col-l-7 {
+        width: 58.33333%;
+    }
+
+    .col-l-8 {
+        width: 66.66667%;
+    }
+
+    .col-l-9 {
+        width: 75%;
+    }
+
+    .col-l-10 {
+        width: 83.33333%;
+    }
+
+    .col-l-11 {
+        width: 91.66667%;
+    }
+
+    .col-l-12 {
+        width: 100%;
+    }
+}
+
+ul {
+    list-style-type: none;
+}
+
+.head li {
+    float: left;
+
+}
+
+.head li a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0px 20px;
+    color: white;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+@media only screen and (max-width:740px ){
+    .col-s-1 {width: 8.33333%;}
+    .col-s-2 {width: 16.66667%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33333%;}
+    .col-s-5 {width: 41.66667%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33333%;}
+    .col-s-8 {width: 66.66667%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33333%;}
+    .col-s-11 {width: 91.66667%;}
+    .col-s-12 {width: 100%;}
+    /*tăng kích thước font cho dễ đọc*/
+    li{
+        font-size: 40px;
+        text-align: center;
+        color: white;
+    }
+    p{
+        font-size: 35px;
+        color: white;
+    }
+    .title{
+        font-size: 55px;
+        color: white;
+    }
+}
+#ann{
+    display: flex;
+    height: 40px;
+    width: 100%;
+    background-color: #7abaff;
+    z-index: 1;
+    line-height: 40px;
+    text-align: center;
+}

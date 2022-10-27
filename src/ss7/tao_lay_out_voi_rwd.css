@@ -1,0 +1,50 @@
+#size1 {
+    height: 50px;
+    width: 100%;
+    background-color: #333;
+    position: fixed;
+    top: 0px;
+}
+
+#size2 {
+    height: 1000px;
+    width: 20%;
+    background: wheat;
+    float: left;
+}
+
+#size3 {
+    height: 1000px;
+    width: 60%;
+    background: blue;
+    float: left;
+}
+
+#size4 {
+    height: 1000px;
+    width: 20%;
+    background: wheat;
+    float: right;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin: auto;
+}
+li a:hover {
+    background-color: #111;
+}
+
+
