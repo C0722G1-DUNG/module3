@@ -1,0 +1,4 @@
+ .col-12 :hover {
+cursor: pointer;
+border: 3px solid hotpink;
+ }
