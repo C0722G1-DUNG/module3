@@ -8,12 +8,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name = "studentServlet",value = "/student")
-public class studentServlet extends HttpServlet {
-    private static List<student> studentList = new ArrayList<>();
+public class StudentServlet extends HttpServlet {
+    private static List<Student> studentList = new ArrayList<>();
     static {
-studentList.add(new student("Dũng","06/12/2002","Hà Nội","https://gamek.mediacdn.vn/133514250583805952/2020/7/7/photo-1-1594098002042331340775.jpg"));
-studentList.add(new student("An","05/01/1991","Hà Nội","https://gaixinh.photo/wp-content/uploads/2021/10/anh-hot-girl-6.jpg"));
-studentList.add(new student("Bình","20/12/2002","Hà Nội","https://gamek.mediacdn.vn/133514250583805952/2020/7/7/photo-1-1594098002042331340775.jpg"));
+studentList.add(new Student("Dũng","06/12/2002","Hà Nội","https://gamek.mediacdn.vn/133514250583805952/2020/7/7/photo-1-1594098002042331340775.jpg"));
+studentList.add(new Student("An","05/01/1991","Hà Nội","https://gaixinh.photo/wp-content/uploads/2021/10/anh-hot-girl-6.jpg"));
+studentList.add(new Student("Bình","20/12/2002","Hà Nội","https://gamek.mediacdn.vn/133514250583805952/2020/7/7/photo-1-1594098002042331340775.jpg"));
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

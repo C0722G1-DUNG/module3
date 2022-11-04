@@ -1,19 +1,19 @@
 import java.time.LocalDate;
 
-public class student {
+public class Student {
     private String name;
-    private String birth_of_day;
+    private String birthOfDay;
     private String address;
     private String image;
 
-    public student(String name, String birth_of_day, String address, String image) {
+    public Student(String name, String birth_of_day, String address, String image) {
         this.name = name;
-        this.birth_of_day = birth_of_day;
+        this.birthOfDay = birth_of_day;
         this.address = address;
         this.image = image;
     }
 
-    public student() {
+    public Student() {
     }
 
     public String getName() {
@@ -24,12 +24,12 @@ public class student {
         this.name = name;
     }
 
-    public String getBirth_of_day() {
-        return birth_of_day;
+    public String getBirthOfDay() {
+        return birthOfDay;
     }
 
-    public void setBirth_of_day(String birth_of_day) {
-        this.birth_of_day = birth_of_day;
+    public void setBirthOfDay(String birthOfDay) {
+        this.birthOfDay = birthOfDay;
     }
 
     public String getAddress() {
