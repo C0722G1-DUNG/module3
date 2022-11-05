@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+@media only screen and (min-width: 1241px ) {
+    .col-s-1 {
+        width: 8.33333%;
+    }
+
+    .col-s-2 {
+        width: 16.66667%;
+    }
+
+    .col-s-3 {
+        width: 25%;
+    }
+
+    .col-s-4 {
+        width: 33.33333%;
+    }
+
+    .col-s-5 {
+        width: 41.66667%;
+    }
+
+    .col-s-6 {
+        width: 50%;
+    }
+
+    .col-s-7 {
+        width: 58.33333%;
+    }
+
+    .col-s-8 {
+        width: 66.66667%;
+    }
+
+    .col-s-9 {
+        width: 75%;
+    }
+
+    .col-s-10 {
+        width: 83.33333%;
+    }
+
+    .col-s-11 {
+        width: 91.66667%;
+    }
+
+    .col-s-12 {
+        width: 100%;
+    }
+}
+
+.row {
+    display: flex;
+    /* các item sẽ bọc trọn trong container ,
+     khi tăng hoặc giảm chiều rộng không bị nhảy khỏi hàng*/
+    flex-wrap: wrap;
+}
+
+.head {
+    background-color: #40E0D0;
+    margin-bottom: 10px;;
+    height: 100px;
+    /*căn chỉnh */
+    /*justify-content: center;*/
+    width: 94.3%;
+    position: relative;
+}
+
+/*chọn màu nhạt tùy ý*/
+
+.left {
+    background: #40E0D0;
+    margin-right: 20px;
+
+}
+
+.content {
+    background-color: #40E0D0;
+    margin-left: 20px;;
+}
+
+ul {
+    list-style-type: none;
+
+
+}
+
+.head li {
+    float: left;
+}
+
+.head li a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0 20px;
+    color: #fff;
+
+}
+
+li a:hover {
+    background-color: #ccc;
+    color: #7abaff;
+
+}
+
+#id1 {
+    position: absolute;
+    width: 100px;
+    visibility: hidden;
+}
+
+#id2 {
+    position: absolute;
+    width: 100px;
+    visibility: hidden;
+}
+#meunu ul li:hover ul {
+    visibility: visible;
+}
