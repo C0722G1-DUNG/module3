@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="02746444-6ffb-44da-946c-86281b9b9233" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../casestudy/task_11-15_casestude.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy/task_11-15_casestude.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy/task_16-20_casestude.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy/task_16-20_casestude.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../apache-tomcat-9.0.68/webapps/ROOT/WEB-INF/classes/controller/ProductServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../apache-tomcat-9.0.68/webapps/ROOT/WEB-INF/classes/controller/ProductServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../apache-tomcat-9.0.68/webapps/ROOT/WEB-INF/classes/repository/IProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../apache-tomcat-9.0.68/webapps/ROOT/WEB-INF/classes/repository/IProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../apache-tomcat-9.0.68/webapps/ROOT/WEB-INF/classes/repository/impl/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../apache-tomcat-9.0.68/webapps/ROOT/WEB-INF/classes/repository/impl/ProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../apache-tomcat-9.0.68/webapps/ROOT/WEB-INF/classes/service/IProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../apache-tomcat-9.0.68/webapps/ROOT/WEB-INF/classes/service/IProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../apache-tomcat-9.0.68/webapps/ROOT/WEB-INF/classes/service/impl/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../apache-tomcat-9.0.68/webapps/ROOT/WEB-INF/classes/service/impl/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../apache-tomcat-9.0.68/webapps/ROOT/view/product/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../apache-tomcat-9.0.68/webapps/ROOT/view/product/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casestudy_web/task1.2-1.5/contract/add_contract.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../casestudy_web/task1.2-1.5/contract/add_contract.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../casestudy_web/task1.2-1.5/contract/task1.5_contract.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../casestudy_web/task1.2-1.5/contract/task1.5_contract.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/build/classes/java/main/controller/ProductServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/build/classes/java/main/controller/ProductServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/build/classes/java/main/repository/IProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/build/classes/java/main/repository/IProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/build/classes/java/main/repository/impl/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/build/classes/java/main/repository/impl/ProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/build/classes/java/main/service/IProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/build/classes/java/main/service/IProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/build/classes/java/main/service/impl/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/build/classes/java/main/service/impl/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/build/libs/product_management-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/build/libs/product_management-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/src/main/java/controller/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/src/main/java/controller/ProductServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/src/main/java/repository/IProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/src/main/java/repository/IProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/src/main/java/repository/impl/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/src/main/java/repository/impl/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/src/main/java/service/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/src/main/java/service/IProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/src/main/java/service/impl/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/src/main/java/service/impl/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/src/main/webapp/view/product/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../s11_mvc_model/exercise/product_management/src/main/webapp/view/product/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss5_sql_view_index_va_stored_procedure/bai_tap_ view_index_store_procedure.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss5_sql_view_index_va_stored_procedure/bai_tap_ view_index_store_procedure.sql" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2HD5rZh6CjSNeU2kxgUckKAp2WU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="02746444-6ffb-44da-946c-86281b9b9233" name="Default Changelist" comment="" />
+      <created>1667807012714</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1667807012714</updated>
+      <workItem from="1667807013903" duration="67000" />
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="249" y="0" key="#Project_Structure" timestamp="1667807017828">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1667807017828" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1667807030414">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1667807030414" />
+    <state x="209" y="23" key="new project wizard" timestamp="1667807079042">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="23" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1667807079042" />
+  </component>
+</project>
