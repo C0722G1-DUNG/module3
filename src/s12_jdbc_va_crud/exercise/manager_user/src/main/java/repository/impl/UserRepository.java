@@ -17,6 +17,8 @@ public class UserRepository implements IUserRepository {
     private static final String DELETE_USERS_SQL = "delete from users where id = ?;";
     private static final String SELECT_USER_BY_ID = "select id,name,email,country from users where id =?";
     private static final String UPDATE_USERS_SQL = "update users set name = ?,email= ?, country =? where id = ?;";
+    private static final String FIND_USER = "SELECT * FROM users where country like ?;";
+
 
     @Override
     public List<User> findAll() {
@@ -114,6 +116,33 @@ public class UserRepository implements IUserRepository {
             throwables.printStackTrace();
         }
         return false;
+    }
+
+    @Override
+    public List<User>  searchByCountry(String country) {
+        List<User> userList = new ArrayList<>();
+        Connection connection = BaseRepository.getConnectDB();
+
+        {
+            try {
+                PreparedStatement ps = connection.prepareStatement(FIND_USER);
+                ps.setString(1,"%"+country+"");
+                ResultSet resultSet = ps.executeQuery();
+                while (resultSet.next()) {
+                    int id = resultSet.getInt("id");
+                    String name = resultSet.getString("name");
+                    String email = resultSet.getString("email");
+                    String country1 = resultSet.getString("country");
+                    User user = new User(id,name,email,country1);
+                    userList.add(user);
+
+
+                }
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+        }
+        return userList;
     }
 
 

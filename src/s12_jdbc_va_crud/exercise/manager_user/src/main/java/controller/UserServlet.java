@@ -94,7 +94,8 @@ public class UserServlet extends HttpServlet {
 
     private void showListStudent(HttpServletRequest request, HttpServletResponse response) {
         List<User> userList = iUserService.findAll();
-        request.setAttribute("userList", userList);
+        String search = request.getParameter("search");
+        request.setAttribute("userList", iUserService.searchByCountry(search));
         try {
             request.getRequestDispatcher("view/user/list.jsp").forward(request, response);
         } catch (ServletException e) {

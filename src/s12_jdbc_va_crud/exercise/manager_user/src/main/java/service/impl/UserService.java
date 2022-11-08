@@ -30,6 +30,11 @@ private static IUserRepository iUserRepository = new UserRepository();
     }
 
     @Override
+    public List<User> searchByCountry(String country) {
+        return iUserRepository.searchByCountry(country==null ? "": country);
+    }
+
+    @Override
     public boolean update(User user) {
         return iUserRepository.update(user);
     }

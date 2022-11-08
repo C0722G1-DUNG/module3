@@ -10,5 +10,5 @@ public interface IUserService {
     boolean delete(int id);
     boolean update(User user);
     User selectUser(int id);
-
+    List<User>  searchByCountry(String country);
 }
