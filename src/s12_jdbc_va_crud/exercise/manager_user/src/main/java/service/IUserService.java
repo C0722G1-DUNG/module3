@@ -11,4 +11,6 @@ public interface IUserService {
     boolean update(User user);
     User selectUser(int id);
     List<User>  searchByCountry(String country);
+    void insertUserStore(User user);
+    User getUserById(int id);
 }

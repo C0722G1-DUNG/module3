@@ -11,4 +11,7 @@ public interface IUserRepository {
     User selectUser(int id);
     boolean update(User user);
     List<User>  searchByCountry(String country);
+    User getUserById(int id);
+    void insertUserStore(User user);
+
 }

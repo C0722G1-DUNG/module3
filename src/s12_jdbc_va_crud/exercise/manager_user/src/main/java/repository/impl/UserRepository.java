@@ -4,10 +4,7 @@ import modal.User;
 import repository.BaseRepository;
 import repository.IUserRepository;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -119,21 +116,21 @@ public class UserRepository implements IUserRepository {
     }
 
     @Override
-    public List<User>  searchByCountry(String country) {
+    public List<User>  searchByCountry(String searchByCountry) {
         List<User> userList = new ArrayList<>();
         Connection connection = BaseRepository.getConnectDB();
 
         {
             try {
                 PreparedStatement ps = connection.prepareStatement(FIND_USER);
-                ps.setString(1,"%"+country+"");
+                ps.setString(1,"%"+searchByCountry+"");
                 ResultSet resultSet = ps.executeQuery();
                 while (resultSet.next()) {
                     int id = resultSet.getInt("id");
                     String name = resultSet.getString("name");
                     String email = resultSet.getString("email");
-                    String country1 = resultSet.getString("country");
-                    User user = new User(id,name,email,country1);
+                    String country = resultSet.getString("country");
+                    User user = new User(id,name,email,country);
                     userList.add(user);
 
 
@@ -143,6 +140,37 @@ public class UserRepository implements IUserRepository {
             }
         }
         return userList;
+    }
+
+    @Override
+    public User getUserById(int id) {
+        User user = null;
+        List<User> userList = new ArrayList<>();
+        String query = "{CALL get_user_by_id(?)}";
+Connection connection = BaseRepository.getConnectDB();
+        try {
+            CallableStatement callableStatement = connection.prepareCall(query);
+            callableStatement.setInt(1,id);
+            ResultSet rs = callableStatement.executeQuery();
+            while (rs.next()){
+                String name = rs.getString("name");
+
+                String email = rs.getString("email");
+
+                String country = rs.getString("country");
+
+                 user = new User(id, name, email, country);
+                userList.add(user);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return user;
+    }
+
+    @Override
+    public void insertUserStore(User user) {
+
     }
 
 

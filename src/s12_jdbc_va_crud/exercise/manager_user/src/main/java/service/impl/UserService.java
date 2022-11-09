@@ -35,6 +35,16 @@ private static IUserRepository iUserRepository = new UserRepository();
     }
 
     @Override
+    public void insertUserStore(User user) {
+         iUserRepository.insertUserStore(user);
+    }
+
+    @Override
+    public User getUserById(int id) {
+        return iUserRepository.getUserById(id);
+    }
+
+    @Override
     public boolean update(User user) {
         return iUserRepository.update(user);
     }
