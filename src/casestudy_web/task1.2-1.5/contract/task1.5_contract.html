@@ -58,20 +58,25 @@
     </nav>
     <!--phần add thông tin facility-->
     <div style="height: 10% ;text-align: center;color: #0d6056;width: 100%" class="row">
-        <div class="col-sm-12 col-md-12 ">
-            <h2>Contract</h2>
+        <div class="col-sm-12 col-md-10 ">
+            <h2>Hợp đồng</h2>
         </div>
+        <div class="col-sm-12 col-md-2 ">
+            <a  href="#">Thêm mới hợp đồng</a>
+        </div>
+        </div>
+
         <table  class="table table-success table-striped">
             <thead>
             <tr>
                 <th scope="col">Stt</th>
-                <th scope="col">Facility</th>
-                <th scope="col">Customer</th>
-                <th scope="col">Start time</th>
-                <th scope="col">End time</th>
-                <th scope="col">Deposit</th>
-                <th scope="col">Total</th>
-                <th scope="col">Atach facility</th>
+                <th scope="col">Dịch Vụ</th>
+                <th scope="col">Khách Hàng</th>
+                <th scope="col">Ngày bắt đầu</th>
+                <th scope="col">Ngày kết thúc</th>
+                <th scope="col">Tiền đặt cọc</th>
+                <th scope="col">Tổng Tiền</th>
+                <th scope="col">Các dịch vụ đi kèm</th>
             </tr>
             </thead>
             <tbody>
@@ -83,12 +88,124 @@
                 <td>Mark</td>
                 <td>Otto</td>
                 <td>@mdo</td>
-                <td><button type="button" class="btn btn-danger btn-sm">
-                    <a style="color:white;text-decoration: none" href="#">+</a>
-                </button>
-                    <button type="button" class="btn btn-secondary btn-sm">
-                    <a style="color:white;text-decoration: none" href="#">Service List</a>
+                <td> <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        +
                     </button>
+
+                    <!-- Modal -->
+                    <div  class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Thêm dịch vụ đi kèm</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div  class="modal-body">
+
+                                    <form>
+                                        <div class="mb-3">
+                                            <label  class="form-label">Karaoke</label>
+                                            <input placeholder="Vui lòng nhập số lượng" type="text" class="form-control" aria-describedby="idlHelp">
+                                            <!--                                    hiển thị khi nhập sai form-->
+                                            <!--                                    <div id="idlHelp" class="form-text">We'll never share your email with anyone else.</div>-->
+                                        </div>
+                                        <div class="mb-3">
+                                            <label  class="form-label">Thuê Xe máy</label>
+                                            <input placeholder="Vui lòng nhập số lượng" type="text" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label  class="form-label">Thuê xe đạp</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label  class="form-label">Buffter buổi sáng</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label  class="form-label">Buffter buổi trưa</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label  class="form-label">Buffter buổi  tối</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </form>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save Facility New</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-info " data-bs-toggle="modal" data-bs-target="#exampleModal6">
+                        Danh sách các dịch vụ đi kèm
+                    </button>
+
+                    <!-- Modal -->
+
+                    <div  class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel6">NHập khách hàng mới</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div  class="modal-body ">
+                                    <table  class="table table-success table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">Stt</th>
+                                            <th scope="col">Tên dịch vụ đi kèm</th>
+                                            <th scope="col">Gía</th>
+                                            <th scope="col">Đơn VỊ</th>
+                                            <th scope="col">Trạng thái</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Karaoke</td>
+                                            <td>10000</td>
+                                            <td>giờ</td>
+                                            <td>Tiện Nghi Hiện tại</td>
+
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Thuê xe máy</td>
+                                            <td>10000</td>
+                                            <td>Chiếc</td>
+                                            <td>Hỏng 1 xe</td>
+
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Thuê xe đạp</td>
+                                            <td>20000</td>
+                                            <td>Chiếc</td>
+                                            <td>Tốt</td>
+
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save Facility New</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </td>
             </tr>
 
@@ -100,12 +217,125 @@
                 <td>Mark</td>
                 <td>Otto</td>
                 <td>@mdo</td>
-                <td><button type="button" class="btn btn-danger btn-sm">
-                    <a style="color:white;text-decoration: none" href="#">+</a>
-                </button>
-                    <button type="button" class="btn btn-secondary btn-sm">
-                        <a style="color:white;text-decoration: none" href="#">Service List</a>
+                <td>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal7">
+                        +
                     </button>
+
+                    <!-- Modal -->
+                    <div  class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel7">Thêm dịch vụ đi kèm</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div  class="modal-body">
+
+                                    <form>
+                                        <div class="mb-3">
+                                            <label  class="form-label">Karaoke</label>
+                                            <input placeholder="Vui lòng nhập số lượng" type="text" class="form-control" aria-describedby="idlHelp">
+                                            <!--                                    hiển thị khi nhập sai form-->
+                                            <!--                                    <div id="idlHelp" class="form-text">We'll never share your email with anyone else.</div>-->
+                                        </div>
+                                        <div class="mb-3">
+                                            <label  class="form-label">Thuê Xe máy</label>
+                                            <input placeholder="Vui lòng nhập số lượng" type="text" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label  class="form-label">Thuê xe đạp</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label  class="form-label">Buffter buổi sáng</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label  class="form-label">Buffter buổi trưa</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label  class="form-label">Buffter buổi  tối</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </form>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save Facility New</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-info " data-bs-toggle="modal" data-bs-target="#exampleModal5">
+                        Danh sách các dịch vụ đi kèm
+                    </button>
+
+                    <!-- Modal -->
+
+                    <div  class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel5">NHập khách hàng mới</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div  class="modal-body ">
+                                        <table  class="table table-success table-striped">
+                                            <thead>
+                                            <tr>
+                                                <th scope="col">Stt</th>
+                                                <th scope="col">Tên dịch vụ đi kèm</th>
+                                                <th scope="col">Gía</th>
+                                                <th scope="col">Đơn VỊ</th>
+                                                <th scope="col">Trạng thái</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Karaoke</td>
+                                                <td>10000</td>
+                                                <td>giờ</td>
+                                                <td>Tiện Nghi Hiện tại</td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Thuê xe máy</td>
+                                                <td>10000</td>
+                                                <td>Chiếc</td>
+                                                <td>Hỏng 1 xe</td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Thuê xe đạp</td>
+                                                <td>20000</td>
+                                                <td>Chiếc</td>
+                                                <td>Tốt</td>
+
+                                            </tr>
+
+                                            </tbody>
+                                        </table>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save Facility New</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </td>
             </tr>
 
@@ -117,34 +347,129 @@
                 <td>Mark</td>
                 <td>Otto</td>
                 <td>@mdo</td>
-                <td><button type="button" class="btn btn-danger btn-sm">
-                    <a style="color:white;text-decoration: none" href="#">+</a>
-                </button>
-                    <button type="button" class="btn btn-secondary btn-sm">
-                        <a style="color:white;text-decoration: none" href="#">Service List</a>
+                <td> <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                        +
                     </button>
+
+                    <!-- Modal -->
+                    <div  class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel3">Thêm dịch vụ đi kèm</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div  class="modal-body">
+
+                                    <form>
+                                        <div class="mb-3">
+                                            <label  class="form-label">Karaoke</label>
+                                            <input placeholder="Vui lòng nhập số lượng" type="text" class="form-control" aria-describedby="idlHelp">
+                                            <!--                                    hiển thị khi nhập sai form-->
+                                            <!--                                    <div id="idlHelp" class="form-text">We'll never share your email with anyone else.</div>-->
+                                        </div>
+                                        <div class="mb-3">
+                                            <label  class="form-label">Thuê Xe máy</label>
+                                            <input placeholder="Vui lòng nhập số lượng" type="text" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label  class="form-label">Thuê xe đạp</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label  class="form-label">Buffter buổi sáng</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label  class="form-label">Buffter buổi trưa</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label  class="form-label">Buffter buổi  tối</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </form>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save Facility New</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-info " data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                        Danh sách các dịch vụ đi kèm
+                    </button>
+
+                    <!-- Modal -->
+
+                    <div  class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel1">NHập khách hàng mới</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div  class="modal-body ">
+                                    <table  class="table table-success table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">Stt</th>
+                                            <th scope="col">Tên dịch vụ đi kèm</th>
+                                            <th scope="col">Gía</th>
+                                            <th scope="col">Đơn VỊ</th>
+                                            <th scope="col">Trạng thái</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Karaoke</td>
+                                            <td>10000</td>
+                                            <td>giờ</td>
+                                            <td>Tiện Nghi Hiện tại</td>
+
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Thuê xe máy</td>
+                                            <td>10000</td>
+                                            <td>Chiếc</td>
+                                            <td>Hỏng 1 xe</td>
+
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Thuê xe đạp</td>
+                                            <td>20000</td>
+                                            <td>Chiếc</td>
+                                            <td>Tốt</td>
+
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save Facility New</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </td>
             </tr>
 
-            <tr>
-                <th scope="row">4</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td><button type="button" class="btn btn-danger btn-sm">
-                    <a style="color:white;text-decoration: none" href="#">+</a>
-                </button>
-                    <button type="button" class="btn btn-secondary btn-sm">
-                        <a style="color:white;text-decoration: none" href="#">Service List</a>
-                    </button>
-                </td>
-            </tr>
             </tbody>
         </table>
-    </div>
     <!--phần end thông tin facility-->
     <!--end thông tin logo-->
 </div>
