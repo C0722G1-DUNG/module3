@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Admin
@@ -16,14 +17,35 @@
     <pre>ID:
     <input type="number" name="id" value="${customer.getId()}" readonly>
     </pre>
+
+
     <pre>customer_type_id:
-        <input type="number" name="customer_type_id" value="${customer.getCustomer_type_id()}" >
+<%--        <input type="number" name="customer_type_id" value="${customer.getCustomer_type_id()}" >--%>
+        <select name="customer_type_id" >
+            <c:forEach var="ct" items="${customerListType}">
+                <option value="${ct.getIdCustomerType()}" ${ct.getIdCustomerType()==customer.getId()?"checked":""} >
+                    ${ct.getNameCustomerType()}
+<%--                    <c:if test="${ct.getIdCustomerType()==customer.getId()}">--%>
+<%--                        --%>
+<%--                    </c:if>--%>
+                </option>
+            </c:forEach>
+        </select>
+
     </pre>
+
+
     <pre> name:<input type="text" name="name" value="${customer.getName()}" >
     </pre>
     <pre>date_of_birth:<input type="text" name="date_of_birth" value="${customer.getDate_of_birth()}" >
     </pre>
-    <pre>gender:<input type="text" name="gender" value="${customer.isGender()}" >
+
+    <pre>gender:
+        <input type="radio" name="gender" ${customer.isGender() ==true ?"checked":""}>
+        <label >Nam</label>
+        <input type="radio" name="gender" ${customer.isGender() ==false ?"checked":""}>
+        <label >Nữ</label>
+
     </pre>
     <pre>id_card:<input type="text" name="id_card" value="${customer.getId_card()}" >
     </pre>

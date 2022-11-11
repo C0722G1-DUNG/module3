@@ -41,6 +41,7 @@
         <div style="height: 100%" class="col-sm-12 col-md-3 d-flex"
              style=" border: 1px ;padding: 10px; width: 300px; height: 200px;text-align: justify; font-size: 100px">
             <img src="../../img/location_on_FILL0_wght400_GRAD0_opsz48.png" height="48" width="48"/>
+
             <p>
                 103 – 105 Đường Võ Nguyên Giáp, Phường Khuê Mỹ, Quận Ngũ hành Sơn, Tp. Đà Nẵng, Việt Nam
 
@@ -59,10 +60,10 @@
         <div class="container-fluid">
             <div class="collapse navbar-collapse justify-content-center " id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" href="#">Home</a>
+                    <a class="nav-link active" href="/">Home</a>
                     <a class="nav-link active" href="#">Service</a>
                     <a class="nav-link active" href="#">Employ</a>
-                    <a class="nav-link active" href="#">Customer</a>
+                    <a class="nav-link active" href="/customer">Customer</a>
 
                 </div>
             </div>
@@ -102,9 +103,9 @@
         </tr>
         </thead>
         <tbody>
-        <c:forEach var="customer" items="${customerList}">
+        <c:forEach var="customer" items="${customerList}" varStatus="status">
             <tr>
-                <td>${customer.getId()}</td>
+                <td>${status.count}</td>
                 <c:forEach var="ct" items="${customerListType}">
                     <c:if test="${ct.idCustomerType==customer.getCustomer_type_id()}">
                         <td>${ct.nameCustomerType}</td>
@@ -123,7 +124,7 @@
                 <td>${customer.getPhone_number()}</td>
                 <td>${customer.getEmail()}</td>
                 <td>${customer.getAddress()}</td>
-                <td><a href="/customer?action=edit&id=${customer.getId()}">Edit</a></td>
+                <td><a class="btn btn-danger" style="text-decoration: none" href="/customer?action=edit&id=${customer.getId()}">Edit</a></td>
                 <td>
 <%--                    <a href="/customer?action=delete&id=${customer.getId()}">Delete</a>--%>
                     <button onclick="infoDelete('${customer.getId()}','${customer.getName()}')" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">

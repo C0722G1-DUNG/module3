@@ -1,10 +1,11 @@
 package controller;
 
-import modal.Customer;
-import service.ICustomerService;
-import service.ICustomerTypeService;
+import modal.customer.Customer;
+import service.customer.ICustomerService;
+import service.customer.ICustomerTypeService;
 import service.impl.CustomerService;
 import service.impl.CustomerTypeService;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,7 +13,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 
 @WebServlet(name = "CustomerServlet", value = "/customer")
 public class CustomerServlet extends HttpServlet {

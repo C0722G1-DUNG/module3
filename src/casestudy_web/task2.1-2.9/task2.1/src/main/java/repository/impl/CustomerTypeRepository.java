@@ -1,9 +1,8 @@
 package repository.impl;
 
-import modal.CustomerType;
+import modal.customer.CustomerType;
 import repository.BaseRepository;
-import repository.ICustomerRepository;
-import repository.ICustomerTypeRepository;
+import repository.customer.ICustomerTypeRepository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

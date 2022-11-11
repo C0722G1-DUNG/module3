@@ -1,8 +1,8 @@
 package repository.impl;
 
-import modal.Customer;
+import modal.customer.Customer;
 import repository.BaseRepository;
-import repository.ICustomerRepository;
+import repository.customer.ICustomerRepository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,13 +10,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import java.util.Collection;
 import java.util.List;
 
 public class CustomerRepository implements ICustomerRepository {
     private static final String SELECT_ALL = "SELECT * FROM furama_study.customer;";
     private static final String INSERT_INTO_CUSTOMER = "INSERT INTO customer (customer_type_id,`name`, date_of_birth, gender, id_card, phone_number, email, address) values (?,?,?,?,?,?,?,?);";
-    private static final String SELECT_BY_NAME = "select*from customer where `name` like ?;";
+    private static final String SELECT_BY_NAME = "select*from customer where `name` like ? or  address like ?;";
     private static final String DELETE_BY_ID = "delete from customer where id =?;";
     private static final String UPDATE_CUSTOMER = "update customer set customer_type_id = ? , `name`= ?, date_of_birth = ?,gender=?,id_card = ?,phone_number = ?,email= ?,address=? where id = ?;";
     private static final String SELECT_FIND_BY_ID = "select * from customer where id = ?;";
@@ -135,7 +134,8 @@ public class CustomerRepository implements ICustomerRepository {
         Connection connection = BaseRepository.getConnectDB();
         try {
             PreparedStatement ps = connection.prepareStatement(SELECT_BY_NAME);
-            ps.setString(1, "%" + searchByName + "");
+            ps.setString(1, "%" + searchByName + "%");
+            ps.setString(2,"%"+searchByName+"%");
             ResultSet resultSet = ps.executeQuery();
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");

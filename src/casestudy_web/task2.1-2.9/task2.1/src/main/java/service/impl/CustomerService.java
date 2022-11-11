@@ -1,9 +1,9 @@
 package service.impl;
 
-import modal.Customer;
-import repository.ICustomerRepository;
+import modal.customer.Customer;
+import repository.customer.ICustomerRepository;
 import repository.impl.CustomerRepository;
-import service.ICustomerService;
+import service.customer.ICustomerService;
 
 import java.util.List;
 

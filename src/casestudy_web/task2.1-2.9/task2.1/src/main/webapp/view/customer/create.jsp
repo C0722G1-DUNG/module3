@@ -61,8 +61,16 @@
            <form action="/customer?action=add" method="post">
                <div class="mb-3">
     <pre>customer_type_id:
-        <input type="text" name="customer_type_id">
+<%--        <input type="text" name="customer_type_id">--%>
+        <select name="customer_type_id" >
+            <c:forEach var="ct" items="${customerListType}">
+                <option value="${ct.getIdCustomerType()}">
+                        ${ct.getNameCustomerType()}
+                </option>
+            </c:forEach>
+        </select>
     </pre>
+
                </div>
                <div class="mb-3">
     <pre>name:
@@ -76,7 +84,8 @@
                </div>
                    <div class="mb-3">
     <pre> gender:
-        <input type="text" name="gender">
+        <input type="radio" name="gender" value="true">Nam
+        <input type="radio" name="gender" value="false">Nữ
     </pre>
                    </div>
                <div class="mb-3">
