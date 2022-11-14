@@ -17,6 +17,7 @@ public class UserRepository implements IUserRepository {
     private static final String FIND_USER = "SELECT * FROM users where country like ?;";
 
 
+
     @Override
     public List<User> findAll() {
         List<User> userList = new ArrayList<>();

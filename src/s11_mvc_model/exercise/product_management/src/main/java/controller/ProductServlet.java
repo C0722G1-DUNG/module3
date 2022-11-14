@@ -33,7 +33,7 @@ public class ProductServlet extends HttpServlet {
                 remove(request,response);
                 break;
             default:
-                showListStudent(request, response);
+//                showListStudent(request, response);
         }
     }
 
@@ -41,6 +41,7 @@ public class ProductServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         productService.remove(id);
         try {
+//            quay về trang chính list
             response.sendRedirect("/product");
         } catch (IOException e) {
             e.printStackTrace();
@@ -159,7 +160,8 @@ public class ProductServlet extends HttpServlet {
     }
 
     private void showListStudent(HttpServletRequest request, HttpServletResponse response) {
-        request.setAttribute("productList", productService.findAll());
+        String search = request.getParameter("search");
+        request.setAttribute("productList", productService.searchByName(search));
         try {
             request.getRequestDispatcher("view/product/list.jsp").forward(request, response);
         } catch (ServletException e) {

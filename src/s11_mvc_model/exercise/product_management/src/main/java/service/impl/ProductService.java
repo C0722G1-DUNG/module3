@@ -34,4 +34,10 @@ productRepository.add(product);
     public Product findById(int id) {
         return productRepository.findById(id);
     }
+
+    @Override
+    public List<Product> searchByName(String search) {
+        return productRepository.searchByName(search == null ? "" : search);
+    }
+
 }

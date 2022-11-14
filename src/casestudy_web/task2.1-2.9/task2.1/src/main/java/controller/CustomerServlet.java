@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Map;
 
 @WebServlet(name = "CustomerServlet", value = "/customer")
 public class CustomerServlet extends HttpServlet {
@@ -70,19 +71,22 @@ public class CustomerServlet extends HttpServlet {
         String email = request.getParameter("email");
         String address = request.getParameter("address");
         Customer customer = new Customer(customer_type_id, name, date_of_birth, gender, id_card, phone_number, email, address);
-        boolean check = customerService.add(customer);
-        String mess = "Thêm mới không thành công";
-        if (check) {
-            mess = "Thêm mới thành công";
+        Map<String,String> errorMap  = customerService.add(customer);
+        String mess = "Thêm mới thành công";
+        if (!errorMap.isEmpty()){
+            mess="thêm mới không thành công";
+            request.setAttribute("errorMap",errorMap);
+            request.setAttribute("name",name);
         }
         request.setAttribute("mess", mess);
-        try {
-            request.getRequestDispatcher("view/customer/create.jsp").forward(request, response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        showFormCreat(request,response);
+//        try {
+//            request.getRequestDispatcher("view/customer/create.jsp").forward(request, response);
+//        } catch (ServletException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
     }
 
@@ -110,7 +114,9 @@ public class CustomerServlet extends HttpServlet {
 
     private void ShowFormEdit(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
- request.setAttribute("customer",customerService.findById(id));
+     request.setAttribute("customer",customerService.findById(id));
+        request.setAttribute("customerListType",customerTypeService.findAll());
+
         try {
             request.getRequestDispatcher("view/customer/edit.jsp").forward(request,response);
         } catch (ServletException e) {
@@ -148,6 +154,7 @@ public class CustomerServlet extends HttpServlet {
     }
 
     private void showFormCreat(HttpServletRequest request, HttpServletResponse response) {
+        request.setAttribute("customerListType",customerTypeService.findAll());
         try {
             request.getRequestDispatcher("view/customer/create.jsp").forward(request, response);
         } catch (ServletException e) {
